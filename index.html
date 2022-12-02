@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3D form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <div class="scene">
 	<div class="cube">
 		<nav class="steps">
@@ -8,74 +18,91 @@
 			<div class="dot step_5"></div>
 			<div class="dot step_6"></div>
 		</nav>
-		<div class="cube__face  cube__face--front" id="step__1">
-			<div class="container">
-				<input type="text" class="label" placeholder="Please pick a color" disabled>
-				<div class="radio">
-					<div class="item blue" data-color="blue"></div>
-					<div class="item yellow" data-color="yellow"></div>
-					<div class="item purple" data-color="purple"></div>
-					<div class="item green" data-color="green"></div>
-					<div class="item violet" data-color="violet"></div>
-				</div>
-				<div class="btn" style="display:none">
-					<span data-step="1">Continue</span>
-				</div>
-			</div>
-		</div>
-		<div class="cube__face cube__face--bottom" id="step__2">
-			<div class="container">
-				<input type="text" placeholder="What's your full name ?">
-				<div class="btn">
-					<span data-step="2">Continue</span>
-				</div>
-			</div>
-		</div>
-		<div class="cube__face" id="step__3">
-			<div class="container">
-				<input type="email" placeholder="Tell me your email adress">
-				<div class="btn">
-					<span data-step="3">Continue</span>
-				</div>
-			</div>
-		</div>
-		<div class="cube__face" id="step__4">
-			<div class="container">
-				<input type="password" placeholder="Enter your password (at least 4 chars)">
-				<div class="btn">
-					<span data-step="4">Continue</span>
-				</div>
-			</div>
-		</div>
-		<div class="cube__face" id="step__5">
-			<div class="container">
-				<select name="fav_color" id="fav_color">
-                    <option disabled selected>Select your favorite Ninja Turtle</option>
-                    <option value="Leo">Leo</option>
-                    <option value="Mikey">Mikey</option>
-                    <option value="Donnie">Donnie</option>
-                    <option value="Raph">Raph</option>
-                </select>
-				<div class="btn">
-					<span data-step="5">Continue</span>
-				</div>
-			</div>
-		</div>
-		<div class="cube__face" id="step__6">
-			<div class="container">
-				<input type="text" class="label" placeholder="Are you amazing ?" disabled>
-				<div class="right">
-					<label for="">No</label>
-					<div class="checkbox">
-						<div class="circle"></div>
+		<form action="" method="POST" id="registerForm">
+			<div class="cube__face  cube__face--front" id="step__1">
+				<div class="container">
+					<input type="text" class="label" placeholder="Please pick a color" disabled>
+					<div class="radio">
+						<div class="item blue" data-color="blue"></div>
+						<div class="item yellow" data-color="yellow"></div>
+						<div class="item purple" data-color="purple"></div>
+						<div class="item green" data-color="green"></div>
+						<div class="item violet" data-color="violet"></div>
 					</div>
-					<label for="">Yes</label>
+					<div class="btn" style="display:none">
+						<span data-step="1">Continue</span>
+					</div>
 				</div>
 			</div>
+			<div class="cube__face cube__face--bottom" id="step__2">
+				<div class="container">
+					<input type="text" placeholder="What's your full name ?">
+					<div class="btn">
+						<span data-step="2">Continue</span>
+					</div>
+					<ul class="input-requirements">
+						<li>At least 3!</li>
+						<li>Must containe only letter</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cube__face" id="step__3">
+				<div class="container">
+					
+					<input type="text" placeholder="Tell me your email adress" name="email">
+					<small></small>
+					<div class="btn">
+						<span data-step="3">Continue</span>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="cube__face" id="step__4">
+				<div class="container">
+					<input type="password" placeholder="Enter your password (at least 4 chars)">
+					<div class="btn">
+						<span data-step="4">Continue</span>
+					</div>
+				</div>
+			</div>
+			<div class="cube__face" id="step__5">
+				<div class="container">
+					<select name="fav_color" id="fav_color">
+						<option disabled selected>Select your favorite Ninja Turtle</option>
+						<option value="Leo">Leo</option>
+						<option value="Mikey">Mikey</option>
+						<option value="Donnie">Donnie</option>
+						<option value="Raph">Raph</option>
+					</select>
+					<div class="btn">
+						<span data-step="5">Continue</span>
+					</div>
+				</div>
+			</div>
+			<div class="cube__face" id="step__6">
+				<div class="container">
+					<input type="text" class="label" placeholder="Are you amazing ?" disabled>
+					<div class="right">
+						<label for="">No</label>
+						<div class="checkbox">
+							<div class="circle"></div>
+						</div>
+						<label for="">Yes</label>
+					</div>
+				</div>
+			</div>
+		</form>
 		</div>
-	</div>
+	
 </div>
 <div class="welcome">
 	<div class="content">Welcome !</div>
 </div>
 <!-- <button></button> -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+<script src='https://codepen.io/ClementRoche/pen/OrGaMg.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
